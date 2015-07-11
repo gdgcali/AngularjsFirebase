@@ -1,0 +1,38 @@
+
+.active {
+  font-weight: bold;
+  color: white;
+}
+.caja{
+	overflow: auto;
+	height: 300px;
+}
+h3{
+	font-size: 19px;
+}
+.mensajes {
+  border: 1px solid rgb(222, 222, 222);
+  border-radius: 75px 181px 70px 165px;
+  padding: 21px;
+  background:#fff 
+}
+ [scroll-glue-top],
+      [scroll-glue-bottom],
+      [scroll-glue]{
+        height: 100px;
+        overflow-y: scroll;
+        border: 1px solid gray;
+      }
+
+      [scroll-glue-left],
+      [scroll-glue-right]{
+        width: 100px;
+        overflow-x: scroll;
+        border: 1px solid gray;
+        padding: 10px;
+      }
+
+      [scroll-glue-left] span,
+      [scroll-glue-right] span{
+        border: 1px solid black;
+      }

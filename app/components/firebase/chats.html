@@ -1,0 +1,31 @@
+   
+      
+           <div class="col 12 caja" scroll-glu >
+             <div ng-repeat="div in vm.mensajes" class="mensajes animated bounce">
+                <div class="nombre"><h3>{{div.autor}}</h3></div>
+                 <p>{{div.mensaje}}</p>              
+              
+        </div>
+
+           </div>
+           
+</div>
+<div class="col 12 fijo">
+    <form>
+                  <div class="form-group">
+    <label for="code" class="col-sm-2 control-label">Nick</label>
+    <div class="col-sm-4">
+      <input id="nombre" class="form-control" ng-model="vm.mensajes.autor"  >
+    </div>
+    <label for="code" class="col-sm-2 control-label">Mensaje</label>
+    <div class="col-sm-4">
+      <input id="mensaje" class="form-control" ng-model="vm.mensajes.mensaje"  >
+    </div>
+  </div>  
+            </form>
+            
+               <button type="button" ng-click="vm.mensaje()" class="btn btn-sm btn-danger">
+                       <i class="glyphicon  glyphicon-remove">
+                       </i>
+                   </button> 
+</div>
