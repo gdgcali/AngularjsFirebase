@@ -1,31 +1,33 @@
-   
-      
-           <div class="col 12 caja" scroll-glu >
-             <div ng-repeat="div in vm.mensajes" class="mensajes animated bounce">
-                <div class="nombre"><h3>{{div.autor}}</h3></div>
-                 <p>{{div.mensaje}}</p>              
-              
-        </div>
+     
 
-           </div>
-           <div id="scroll"></div>
-           
+<div class="col 12 caja row" scroll-glu >
+ <div ng-repeat="div in vm.mensajes" class=" col-md-12 mensajes animated bounce">
+  <i class="mdi-social-person col-md-1 icono"></i>
+  <div class="nombre col-md-2"><h3>{{div.autor}}:</h3></div>
+  <div class="nombre col-md-12 texto"><p>{{div.mensaje}}</p></div>
+
+
+</div>
+
+</div>
+<div id="scroll"></div>
+
 </div>
 <div class="col 12 fijo">
-    <form>
-                  <div class="form-group">
-    <label for="code" class="col-sm-2 control-label">Nick</label>
-    <div class="col-sm-4">
-      <input id="nombre" class="form-control" ng-model="vm.mensajes.autor"  >
-    </div>
-    <label for="code" class="col-sm-2 control-label">Mensaje</label>
-    <div class="col-sm-4">
-      <input id="mensaje" class="form-control" ng-model="vm.mensajes.mensaje"  >
-    </div>
-  </div>  
-            </form>
-            
-               <button href="#scroll" type="button" ng-click="vm.mensaje()" class="btn btn-sm btn-info">
-                       <i class="mdi-action-done"></i>
-                                          </button> 
+  <form>
+    <div class="form-group">
+      <label for="code" class="col-sm-1 control-label">Nick:</label>
+      <div class="col-sm-5">
+        <input id="nombre" class="form-control" ng-model="vm.mensajes.autor"  >
+      </div>
+      <label for="code" class="col-sm-1 control-label">Mensaje:</label>
+      <div class="col-sm-5">
+        <input id="mensaje" class="form-control" ng-model="vm.mensajes.mensaje"  >
+      </div>
+    </div>  
+  </form>
+
+  <button href="#scroll" type="button" ng-click="vm.mensaje()" class="mensajeenv btn btn-sm btn-info">
+   <i class="mdi-action-done"></i>
+ </button> 
 </div>

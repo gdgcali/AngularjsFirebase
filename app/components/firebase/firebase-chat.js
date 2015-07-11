@@ -1,45 +1,45 @@
   (function(){
-  'use strict';
+    'use strict';
 
-  angular.module(
-    'gdg.chats.chat',
-    [
+    angular.module(
+      'gdg.chats.chat',
+      [
       'ui.router'
-    ])
+      ])
     .config(
       [ '$stateProvider', '$urlRouterProvider',
-        function ($stateProvider, $urlRouterProvider) {
+      function ($stateProvider, $urlRouterProvider) {
 
-          $stateProvider
+        $stateProvider
 
-          .state('app.chats.chat', {
-            url: '/chats-gdg-cali',
-            views: {
-              'content@' : {
-                templateUrl: './app/components/firebase/chats.html',
-               controller: function(utils,  chatsLista , $log ,Notif, chats, $modal, $window, $firebaseArray) {
-                  var vm = this;
-                  var ref = new Firebase("https://radiant-heat-5907.firebaseio.com/");
-                  vm.mensajes = $firebaseArray(ref);   
+        .state('app.chats.chat', {
+          url: '/chats-gdg-cali',
+          views: {
+            'content@' : {
+              templateUrl: './app/components/firebase/chats.html',
+              controller: function(utils,  chatsLista , $log ,Notif, chats, $modal, $window, $firebaseArray) {
+                var vm = this;
+                var ref = new Firebase("https://radiant-heat-5907.firebaseio.com/");
+                vm.mensajes = $firebaseArray(ref);   
 
-                        vm.mensaje = function(){
-                        ref.push({ 'autor': vm.mensajes.autor, 'mensaje': vm.mensajes.mensaje });
-                        vm.mensajes.autor = '';
-                        vm.mensajes.mensaje = '';
-                                                } 
-                                             
+                vm.mensaje = function(){
+                  ref.push({ 'autor': vm.mensajes.autor, 'mensaje': vm.mensajes.mensaje });
+                  vm.mensajes.autor = '';
+                  vm.mensajes.mensaje = '';
+                } 
+                
 
-              
-                },
-                controllerAs: 'vm'
-              }
+                
+              },
+              controllerAs: 'vm'
             }
-          })
+          }
+        })
 
-          
-        }
+        
+      }
       ]
-    )
+      )
 
 
   })();

@@ -5,7 +5,7 @@
 }
 .caja{
 	overflow: auto;
-	height: 300px;
+	height: 400px;
 }
 h3{
 	font-size: 19px;
@@ -16,3 +16,15 @@ h3{
   padding: 21px;
   background:#fff 
 }
+.icono{
+  font-size: 53px!important;
+  border: 1px solid;
+  border-radius: 50px;
+  width: 55px;
+  padding: 0px;
+}
+.texto {
+  padding: 12px 69px 12px 69px;
+}
+.mensajeenv{
+	float: right;
